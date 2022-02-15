@@ -18,3 +18,4 @@ RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - \
 #
 # set env
 ENV DEBIAN_FRONTEND=dialog
+LABEL org.opencontainers.image.source https://github.com/kumanoryo/dot-devcontainer-terraform-1.1
