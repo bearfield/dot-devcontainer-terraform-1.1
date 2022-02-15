@@ -1,6 +1,6 @@
 {
-    "name": "terraform",
-    "image": "ghcr.io/kumanoryo/terraform-1.1:latest",
+    "name": "terraform-1.1",
+    "image": "ghcr.io/kumanoryo/terraform:1.1",
 
     "settings": {
         "terminal.integrated.profiles.linux": {

@@ -10,11 +10,11 @@ jobs:
     name: Build docker image from Dockerfile
     runs-on: ubuntu-latest
     steps:
-      - name: Set container image name
-        run: echo "::set-output name=image-name::terraform-1.1"
+      - name: Set container image name and tag
+        run: |
+          echo "::set-output name=image-name::terraform"
+          echo "::set-output name=tag::1.1"
         id: container
-      - name: Show Branch Name
-        run: echo ${{ steps.container.outputs.image-name }}
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Login to GitHub Container Registry
@@ -30,4 +30,4 @@ jobs:
         with:
           push: true
           context: ./docker
-          tags: ghcr.io/${{ github.repository_owner }}/${{ steps.container.outputs.image-name }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ steps.container.outputs.image-name }}:${{ steps.container.outputs.tag }}

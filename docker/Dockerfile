@@ -1,4 +1,4 @@
-FROM ghcr.io/kumanoryo/debian11-fish:latest
+FROM ghcr.io/kumanoryo/debian-fish:bullseye
 #
 # set argument
 ARG TERRAFORM_VERSION=1.1.*
