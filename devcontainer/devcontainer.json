@@ -14,11 +14,21 @@
             "statusBar.foreground": "#FFFFFF"
         },
         "[terraform]": {
-            "editor.formatOnSave": true
+            "editor.formatOnSave": true,
+            "editor.suggest.preview": true,
+            "editor.defaultFormatter": "hashicorp.terraform",
+            "editor.formatOnSaveMode": "file"
+        },
+        "[terraform-vars]": {
+            "editor.defaultFormatter": "hashicorp.terraform",
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file"
         },
         "terraform-ls.experimentalFeatures": {
-            "validateOnSave": true
-        }
+            "validateOnSave": true,
+            "prefillRequiredFields": true
+        },
+        "terraform.codelens.referenceCount": true
     },
 
     "remoteUser": "kumano_ryo",
